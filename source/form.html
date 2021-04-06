@@ -37,82 +37,73 @@
   </header>
   <main class="main-form">
     <section class="program-select">
-      <div class="program-select__wrapper container">
-        <form class="program-select__form" action="#" method="get">
+      <form class="program-select__form" action="#" method="get">
+        <div class="program-select__wrapper container">
           <h1 class="program-select__title">Подбор программы</h1>
           <p class="program-select__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        </form>
-      </div>
+        </div>
+        <div class="program-select__item program-select__item--base-info">
+          <div class="program-select__wrapper container">
+            <h2 class="visually-hidden">Общие данные</h2>
+            <label class="program-select__label label">Имя:*
+              <input class="program-select__field field" type="text" placeholder="Барсик">
+            </label>
+            <label class="program-select__label label">Вес(кг):*
+              <input class="program-select__field field" type="text" placeholder="7">
+            </label>
+            <label class="program-select__label label">Возраст(лет):
+              <input class="program-select__field field" type="text" placeholder="7">
+            </label>
+          </div>
+        </div>
+        <div class="program-select__item program-select__item--weight-choice">
+          <div class="program-select__wrapper container">
+            <h2 class="visually-hidden">Выбор веса</h2>
+            <label class="program-select__label radio-label" for="slim-choice">Похудение</label>
+            <input class="program-select__field radio-field" type="radio" id="slim-choice">
+            <label class="program-select__label radio-label" for="weight-choice">Набор массы</label>
+            <input class="program-select__field radio-field" type="radio" id="weight-choice">
+            <label class="program-select__label radio-label" for="advice-choice">Не знаю (нужен ваш совет)</label>
+            <input class="program-select__field radio-field" type="radio" id="advice-choice">
+          </div>
+        </div>
+        <div class="program-select__item program-select__item--contacts">
+          <div class="program-select__wrapper container">
+            <h2 class="program-select__title">Контактные данные
+              (владельца кота)</h2>
+            <label class="program-select__label contacts-label">E-mail:*
+              <input type="email" name="email" class="program-select__field contacts-field"
+                placeholder="kuklachev@gmail.com">
+            </label>
+            <label class="program-select__label contacts-label">Телефон:*
+              <input type="tel" name="phone" class="program-select__field contacts-field"
+                placeholder="8 (960) 900-60-90">
+            </label>
+          </div>
+        </div>
+        <div class="program-select__item program-select__item--comments">
+          <div class="program-select__wrapper container">
+            <h2 class="program-select__block">Комментарий</h2>
+            <textarea class="program-select__area" rows="6">Расскажите обо всех повадках кота</textarea>
+          </div>
+        </div>
+        <div class="program-select__item program-select__item--additional">
+          <div class="program-select__wrapper container">
+            <h2 class="program-select__title">Дополнительно</h2>
+            <input type="radio" id="sugar" class="program-select__field additional-field">
+            <label for="sugar" class="program-select__label additional-label">Сахарозаменитель</label>
+            <input type="radio" id="water" class="program-select__field additional-field">
+            <label for="water" class="program-select__label additional-label">Питьевая вода</label>
+            <input type="radio" id="milk" class="program-select__field additional-field">
+            <label for="milk" class="program-select__label additional-label">Молоко</label>
+            <input type="radio" id="vitamins" class="program-select__field additional-field">
+            <label for="vitamins" class="program-select__label additional-label">Витамины</label>
+            <button class="program-select__send button" type="button">Отправить заявку</button>
+            <small class="program-select__reminder">* — Обязательные поля</small>
+          </div>
+        </div>
+      </form>
     </section>
-    <div class="program-select__item program-select__item--base-info">
-      <div class="program-select__wrapper container">
-        <form class="program-select__form" action="#" method="get">
-          <h2 class="visually-hidden">Общие данные</h2>
-          <label class="program-select__label label">Имя:*
-            <input class="program-select__field field" type="text" placeholder="Барсик">
-          </label>
-          <label class="program-select__label label">Вес(кг):*
-            <input class="program-select__field field" type="text" placeholder="7">
-          </label>
-          <label class="program-select__label label">Возраст(лет):
-            <input class="program-select__field field" type="text" placeholder="7">
-          </label>
-        </form>
-      </div>
-    </div>
-    <div class="program-select__item program-select__item--weight-choice">
-      <div class="program-select__wrapper container">
-        <form class="program-select__form" action="#" method="get">
-          <h2 class="visually-hidden">Выбор веса</h2>
-          <label class="program-select__label radio-label" for="slim-choice">Похудение</label>
-          <input class="program-select__field radio-field" type="radio" id="slim-choice">
-          <label class="program-select__label radio-label" for="weight-choice">Набор массы</label>
-          <input class="program-select__field radio-field" type="radio" id="weight-choice">
-          <label class="program-select__label radio-label" for="advice-choice">Не знаю (нужен ваш совет)</label>
-          <input class="program-select__field radio-field" type="radio" id="advice-choice">
-        </form>
-      </div>
-    </div>
-    <div class="program-select__item program-select__item--contacts">
-      <div class="program-select__wrapper container">
-        <form class="program-select__form" action="#" method="get">
-          <h2 class="program-select__title">Контактные данные
-            (владельца кота)</h2>
-          <label class="program-select__label contacts-label">E-mail:*
-            <input type="email" name="email" class="program-select__field contacts-field"
-              placeholder="kuklachev@gmail.com">
-          </label>
-          <label class="program-select__label contacts-label">Телефон:*
-            <input type="tel" name="phone" class="program-select__field contacts-field" placeholder="8 (960) 900-60-90">
-          </label>
-        </form>
-      </div>
-    </div>
-    <div class="program-select__item program-select__item--comments">
-      <div class="program-select__wrapper container">
-        <form class="program-select__form" action="#" method="get">
-          <h2 class="program-select__block">Комментарий</h2>
-          <textarea class="program-select__area" rows="6">Расскажите обо всех повадках кота</textarea>
-        </form>
-      </div>
-    </div>
-    <div class="program-select__item program-select__item--additional">
-      <div class="program-select__wrapper container">
-        <form class="program-select__form" action="#" method="get">
-          <h2 class="program-select__title">Дополнительно</h2>
-          <input type="radio" id="sugar" class="program-select__field additional-field">
-          <label for="sugar" class="program-select__label additional-label">Сахарозаменитель</label>
-          <input type="radio" id="water" class="program-select__field additional-field">
-          <label for="water" class="program-select__label additional-label">Питьевая вода</label>
-          <input type="radio" id="milk" class="program-select__field additional-field">
-          <label for="milk" class="program-select__label additional-label">Молоко</label>
-          <input type="radio" id="vitamins" class="program-select__field additional-field">
-          <label for="vitamins" class="program-select__label additional-label">Витамины</label>
-          <button class="program-select__send button" type="button">Отправить заявку</button>
-          <small class="program-select__reminder">* — Обязательные поля</small>
-        </form>
-      </div>
-    </div>
     <section class="partnership partner-block">
       <div class="partnership__wrapper container">
         <h2 class="visually-hidden">Где мы находимся?</h2>
